@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  init-docker:
+    build: .
+    container_name: init-docker
+    restart: always
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
